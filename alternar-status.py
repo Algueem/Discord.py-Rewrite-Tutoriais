@@ -13,14 +13,15 @@ async def on_ready()
     # ele vai imprimir isso no console, se aparecer essa mensagem ele está online
     while True:
         # quando estiver online...
-        await client.change_presence(activity=discord.Game(name="Nome do seu jogo"))
+        await client.change_presence(activity=discord.Activity(name="Nome do seu jogo", type=1))
         await asyncio.sleep(60)
         # vai esperar 60 segundos
-        await client.change_presence(activity=discord.Game(name="Nome do seu jogo 2"))
+        await client.change_presence(activity=discord.Activity(name="Nome do seu jogo 2", type=1))
         # vai alterar depois de 60 segundos para a 2 presence
         await asyncio.sleep(60)
         # bom, aqui não vai alterar mais nenhum status, mas por causa do while True
         # vai alterar para o primeiro status repetindo o ciclo infinitamente
+        # sobre o type veja o outro tutorial para entender melhor
         
         
 client.run('token aqui')
