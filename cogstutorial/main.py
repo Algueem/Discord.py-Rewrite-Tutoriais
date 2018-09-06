@@ -12,7 +12,7 @@ modulos = [
 
 # conexao com discord
 bot = commands.Bot(command_prefix=prefix, case_insensitive=True)
-remover aquele help horroroso
+# remover aquele help horroroso
 bot.remove_command("help")
 
 
