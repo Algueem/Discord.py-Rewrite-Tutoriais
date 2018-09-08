@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # para cada arquivo na lista
     for extension in modulos:
         try:
-            Pepe.load_extension(extension)
+            bot.load_extension(extension)
         except Exception as ir:
             exc = '{}.{}'.format(type(ir).__name__, ir)
             print('falha ao carregar extensoes {} . {}'.format(extension, ir))
