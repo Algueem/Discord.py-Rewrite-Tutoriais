@@ -6,6 +6,10 @@ Async | Rewrite
 server | guild
 client.get_channel("id") | client.get_channel(id)
 
+Sim agora o id não é mais string(uma variavel de texto definida por ' ou ")
+agora é int(numero inteiro) logo quando for usar uma variavel de texto e for usar em algo q seja id converta em int 
+usando int("12313") que ficará 12313(so n coloque letras como "abcd" claro).
+
 
 ## Client e on_message
 Async | Rewrite
