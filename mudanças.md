@@ -12,3 +12,8 @@ pode ser definido por:
 2. message.author - author da mensagem/comando(mais especificamente no privado/DM)
 3. client.get_channel(id) - canal definido por id
 
+logo ficaria
+```python
+canal = message.channel
+canal.send(mensagem)
+```
