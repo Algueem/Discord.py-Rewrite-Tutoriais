@@ -1,5 +1,12 @@
 # Mudanças do discord.py async para a rewrite
 
+## Geral
+Async | Rewrite
+--------|--------
+server | guild
+client.get_channel("id") | client.get_channel(id)
+
+
 ## Client e on_message
 Async | Rewrite
 --------|--------
