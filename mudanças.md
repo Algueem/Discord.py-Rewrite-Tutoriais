@@ -1,4 +1,14 @@
 # Mudanças do discord.py async para a rewrite
+
+## Client e on_message
 Async | Rewrite
 --------|--------
 client.send_message(destino, conteudo) | destino.send(conteúdo)
+client.send_file(filename="nome.extensao") | destino.send(file=discord.File(filename="nome.extensao"))
+
+Bom, pra quem nao sabe o que seria destino, é basicamente o lugar para onde a mensagem(ou arquivo/embed) vai enviar,
+pode ser definido por:
+1. message.channel - canal da mensagem/comando
+2. message.author - author da mensagem/comando(mais especificamente no privado/DM)
+3. client.get_channel(id) - canal definido por id
+
