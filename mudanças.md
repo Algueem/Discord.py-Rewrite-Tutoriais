@@ -26,16 +26,17 @@ pode ser definido por:
 
 logo ficaria:
 ```python
-canal = message.channel
-canal.send(mensagem)
+destino = message.channel
+destino.send(mensagem)
 ```
 ou
 ```python
-canal = message.author
-canal.send(mensagem)
+destino = message.author
+destino.send(mensagem)
 ```
 ou
 ```python
-canal = client.get_channel(id)
-canal.send(mensagem)
+destino = client.get_channel(id)
+destino.send(mensagem)
 ```
+
