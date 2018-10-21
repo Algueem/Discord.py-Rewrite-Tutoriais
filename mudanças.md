@@ -40,6 +40,7 @@ destino = client.get_channel(id)
 destino.send(mensagem)
 ```
 
+Async | Rewrite
 --------|--------
 client.delete_message(message) | message.delete()
 client.delete_message(todelete) | todelete.delete()
