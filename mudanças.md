@@ -12,6 +12,7 @@ usando int("12313") que ficará 12313(so n coloque letras como "abcd" claro).
 
 
 ## Client e on_message
+### Envio de mensagens/arquivos/embeds
 Async | Rewrite
 --------|--------
 client.send_message(destino, conteudo) | destino.send(conteúdo)
@@ -40,6 +41,7 @@ destino = client.get_channel(id)
 destino.send(mensagem)
 ```
 
+### Editando mensagens/embed do bot e deletando mensagens de usuarios
 Async | Rewrite
 --------|--------
 client.delete_message(message) | message.delete()
