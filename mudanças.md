@@ -21,7 +21,7 @@ client.send_message(destino, embed=variaveldoembed) | destino.send(embed=variave
 Bom, pra quem nao sabe o que seria destino, é basicamente o lugar para onde a mensagem(ou arquivo/embed) vai enviar,
 pode ser definido por:
 1. message.channel - canal da mensagem/comando
-2. message.author - author da mensagem/comando(mais especificamente no privado/DM)
+2. message.author - autor da mensagem/comando(mais especificamente no privado/DM)
 3. client.get_channel(id) - canal definido por id
 
 logo ficaria:
@@ -40,3 +40,31 @@ destino = client.get_channel(id)
 destino.send(mensagem)
 ```
 
+--------|--------
+client.delete_message(message) | message.delete()
+client.delete_message(todelete) | todelete.delete()
+client.edit_message(antes, embed/content="") | antes.edit(embed/content="")
+
+Em relação a editar/deletar mensagens é bem simples, para deletar a mensagem do autor do comando seria:
+```python
+# message é a mensagem do usuario
+message.delete()
+```
+para deletar a que o bot mandar ficaria:
+```python
+variavelqualquer = await message.channel.send("Olá")
+variavelqualquer.delete()
+```
+
+bom, como não tem como editar de outra pessoa, para editar a do bot ficaria:
+```python
+variavelqualquer = await message.channel.send("Olá")
+variavelqualquer.edit(content="Oi")
+```
+porém, se for um embed é diferente, ficaria:
+```python
+embed = discord.Embed(title="Oi")
+variavelqualquer = await message.channel.send(embed=embed)
+embed2 = discord.Embed(title="Olá")
+variavelqualquer.edit(embed=embed2)
+```
