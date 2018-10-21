@@ -45,7 +45,7 @@ destino.send(mensagem)
 Async | Rewrite
 --------|--------
 client.delete_message(message) | message.delete()
-client.delete_message(todelete) | todelete.delete()
+client.delete_message(tod_elete) | to_delete.delete()
 client.edit_message(antes, embed/content="") | antes.edit(embed/content="")
 
 Em relação a editar/deletar mensagens é bem simples, para deletar a mensagem do autor do comando seria:
@@ -55,8 +55,8 @@ message.delete()
 ```
 para deletar a que o bot mandar ficaria:
 ```python
-variavelqualquer = await message.channel.send("Olá")
-variavelqualquer.delete()
+to_delete = await message.channel.send("Olá")
+to_delete.delete()
 ```
 
 bom, como não tem como editar de outra pessoa, para editar a do bot ficaria:
