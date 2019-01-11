@@ -1,21 +1,38 @@
 # Como alterar o status do seu bot(rewrite)
 
+Primeiramente vou mostrar o que deve ter para alterar o status
+
 ```py
-# como alterar o status para seu bot (transmitindo, jogando, assistindo, ouvindo)
 import discord
 
 client = discord.Client()
 
-# type 1 = jogando
-# type 2 = ouvindo
-# type 3 = assistindo
 
 @client.event
 async def on_ready():
     print("Bot Online")
-    # diferente do outro tutorial, esse vai ficar so um status
-    # mas se quiser ficar alternando faça o outro tutorial e altere o change presence
-    await client.change_presence(activity=discord.Activity(name="Nome do jogo", type=3))
+    # Aqui vai ficar a parte do change_presence, ele irá variar de acordo com o status(transmitindo, jogando, assistindo, ouvindo)
     
 client.run('token aqui')
+```
+
+## Jogando
+
+```py
+await client.change_presence(activity=discord.Activity(name="um jogo", type=discord.ActivityType.playing))
+```
+
+## Assistindo
+```py
+await client.change_presence(activity=discord.Activity(name="um programa", type=discord.ActivityType.watching))
+```
+
+## Ouvindo
+```py
+await client.change_presence(activity=discord.Activity(name="um cantor", type=discord.ActivityType.listening))
+```
+
+## Transmitindo
+```py
+await client.change_presence(activity=discord.Streaming(name="ao vivo", url="https://twitch.tv/"))
 ```
