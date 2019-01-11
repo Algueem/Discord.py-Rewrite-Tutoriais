@@ -1,3 +1,6 @@
+# Como alterar o status do seu bot(rewrite)
+
+```py
 # como alterar o status para seu bot (transmitindo, jogando, assistindo, ouvindo)
 import discord
 
@@ -15,3 +18,4 @@ async def on_ready():
     await client.change_presence(activity=discord.Activity(name="Nome do jogo", type=3))
     
 client.run('token aqui')
+```
