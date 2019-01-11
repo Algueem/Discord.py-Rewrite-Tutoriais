@@ -53,21 +53,32 @@ Em relação a editar/deletar mensagens é bem simples, para deletar a mensagem 
 # message é a mensagem do usuario
 message.delete()
 ```
-para deletar a que o bot mandar ficaria:
+Para deletar a que o bot mandar ficaria:
 ```python
 to_delete = await message.channel.send("Olá")
 to_delete.delete()
 ```
 
-bom, como não tem como editar de outra pessoa, para editar a do bot ficaria:
+Bom, como não tem como editar de outra pessoa, para editar a do bot ficaria:
 ```python
 variavelqualquer = await message.channel.send("Olá")
 variavelqualquer.edit(content="Oi")
 ```
-porém, se for um embed é diferente, ficaria:
+Porém, se for um embed é diferente, ficaria:
 ```python
 embed = discord.Embed(title="Oi")
 variavelqualquer = await message.channel.send(embed=embed)
 embed2 = discord.Embed(title="Olá")
 variavelqualquer.edit(embed=embed2)
 ```
+### Adicionando e removendo reações
+Async | Rewrite
+--------|--------
+client.add_reaction(message, "emoji") | message.add_reaction("emoji")
+client.remove_reaction(message, "emoji", member) | message.remove_reaction("emoji", member)
+
+Adicionar reações não tem segredo, mas remover muita gente esquece do "member", para quem não sabe, é possivel remover reações de outras pessoas e não adicionar por elas, por isso que esse member é necessário. Para obte-lo é só usar:
+```py
+member = message.guild.get_member(client.user.id)
+```
+Nesse caso é para remover o do própio bot, mas também pode colocar ID de membros que estejam no servidor
