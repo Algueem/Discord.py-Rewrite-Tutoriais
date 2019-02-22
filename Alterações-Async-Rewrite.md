@@ -45,7 +45,7 @@ destino.send(mensagem)
 Async | Rewrite
 --------|--------
 client.delete_message(message) | message.delete()
-client.delete_message(tod_elete) | to_delete.delete()
+client.delete_message(to_delete) | to_delete.delete()
 client.edit_message(antes, embed/content="") | antes.edit(embed/content="")
 
 Em relação a editar/deletar mensagens é bem simples, para deletar a mensagem do autor do comando seria:
