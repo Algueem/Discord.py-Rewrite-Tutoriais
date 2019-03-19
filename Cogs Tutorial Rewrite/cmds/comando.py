@@ -2,7 +2,7 @@ from discord.ext import commands
 # o import que deverá ter em todos os arquivos
 
 # nessa "AlgumaClasse" vc pode colocar qualquer coisa
-class AlgumaClasse:
+class AlgumaClasse(commands.Cog):
     def __init__(self, bot)
         self.bot = bot
         
