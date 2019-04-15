@@ -22,6 +22,12 @@ async def on_ready():
     print("O bot está online")
 
 
+# exemplo de comando na main
+@bot.command()
+async def cmd(ctx):
+    await ctx.send('cmd')
+
+
 if __name__ == "__main__":
     # para cada arquivo na lista
     for extension in modulos:
