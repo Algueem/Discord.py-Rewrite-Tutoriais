@@ -5,7 +5,7 @@
 async def example1(arg1, arg2, *args):
     ...
 
-# Usando "?bar um dois três quatro" vamos ter
+# Usando "?example1 um dois três quatro" vamos ter
 # arg1 = 'um'
 # arg2 = 'dois'
 # args = ('três', 'quatro')
@@ -14,7 +14,7 @@ async def example1(arg1, arg2, *args):
 async def example2(arg1, arg2, *, args):
     ...
 
-# Usando "?bar um dois três quatro" vamos ter
+# Usando "?example2 um dois três quatro" vamos ter
 # arg1 = 'um'
 # arg2 = 'dois'
 # args = 'três quatro'
